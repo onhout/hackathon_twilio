@@ -196,7 +196,7 @@ app.post('/queue', function(req, res){
 app.post('/transcriptionArrived', function(req, res){
     var twiml = new twilio.TwimlResponse();
     client.calls(req.body.CallSid).update({
-        url: "https://intense-brook-3860.herokuapp.com//directagain",
+        url: "https://intense-brook-3860.herokuapp.com/directagain",
         method: "POST"
     }, function(err, call) {
         //twiml.say("You said "+req.body.TranscriptionText);
